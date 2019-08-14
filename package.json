@@ -1,0 +1,27 @@
+{
+  "name": "my-weather",
+  "version": "1.0.0",
+  "description": "A weather application where you can type in your city and get weather information about that city",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --progress --watch --developement",
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tafodinho/My-weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tafodinho/My-weather/issues"
+  },
+  "homepage": "https://github.com/tafodinho/My-weather#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}
