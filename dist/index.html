@@ -7,7 +7,52 @@
     <title>Document</title></head>
     <link rel="stylesheet" href="../assets/css/styles.css">
 <body>
-    
+    <div class="container">
+        <div class="search-section">
+            <div class="search-box" id="search-box">
+                <img src="../assets/images/search.svg" alt="" height="20px" width="20px">
+                <input type="" class="search" id="city-text">
+            </div>
+            <div class="weather-info">
+                <div>
+                    <div class="detail">
+                        <h1>20.36<sup>o</sup></h1>
+                        <h2>Clear</h2>
+                        <h3>Limbe, CM</h3>
+                    </div>
+                    <div class="cards-section clearfix">
+                        <div class="wind">
+                            <img src="../assets/images/breeze.svg" alt="" height="100px" width="75px">
+                            <p>4.67km/h</p>
+                            <p>Wind</p>
+                        </div>
+                        <div class="humidity">
+                            <img src="../assets/images/preasure.svg" alt="" height="100px" width="75px">
+                            <p>4.67km/h</p>
+                            <p>Atm. Preasure</p>
+                        </div>
+                        <div class="preasure">
+                            <img src="../assets/images/humidity.svg" alt="" height="100px" width="75px">
+                            <p>4.67km/h</p>
+                            <p>humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map."></div>
+    </div>
+    <!-- <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV8rziWGVJehWl_pTg3lemgXNXwifT2lg &callback=initMap"
+    async defer></script> -->
 </body>
 <script src="main.js"></script>
 </html>

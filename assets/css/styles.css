@@ -1,2 +1,88 @@
-.body {
-  background: pink; }
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap");
+@import url("../css/reset.css");
+body {
+  background: white;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif; }
+
+#map {
+  width: 100vw;
+  height: 100vh; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.container {
+  position: relative;
+  background: grey; }
+  .container .search-section {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 30px;
+    z-index: 1;
+    width: 500px; }
+    .container .search-section .search-box {
+      display: flex;
+      border-radius: 5px;
+      padding: 5px;
+      box-shadow: 1px 1px 12px 2px #ccc; }
+      .container .search-section .search-box img {
+        margin-left: 10px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        color: grey; }
+      .container .search-section .search-box .search {
+        border-style: none;
+        border-radius: 5px;
+        margin-left: 8px;
+        color: grey;
+        width: 100%; }
+    .container .search-section .weather-info {
+      margin-top: 17px;
+      padding: 3px 10px;
+      background: grey;
+      border-radius: 5px;
+      box-shadow: 1px 1px 12px 2px #ccc; }
+      .container .search-section .weather-info .detail {
+        color: white; }
+        .container .search-section .weather-info .detail h1 {
+          font-weight: 700;
+          font-size: 60px; }
+          .container .search-section .weather-info .detail h1 sup {
+            vertical-align: super;
+            font-size: 45px; }
+        .container .search-section .weather-info .detail h2 {
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: 35px; }
+        .container .search-section .weather-info .detail h3 {
+          margin-left: 4px;
+          margin-top: 2px;
+          margin-bottom: 5px;
+          font-size: 25px; }
+      .container .search-section .weather-info .cards-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1.2fr);
+        grid-auto-rows: 45%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px; }
+        .container .search-section .weather-info .cards-section .wind, .container .search-section .weather-info .cards-section .preasure, .container .search-section .weather-info .cards-section .humidity {
+          padding: 5px 5px 20px 5px;
+          background: white;
+          float: left;
+          box-sizing: border-box;
+          margin-left: 4px;
+          margin-right: 4px;
+          border-radius: 5px;
+          text-align: center; }
+          .container .search-section .weather-info .cards-section .wind img, .container .search-section .weather-info .cards-section .preasure img, .container .search-section .weather-info .cards-section .humidity img {
+            margin: 0 auto;
+            display: inline-block; }
+          .container .search-section .weather-info .cards-section .wind p, .container .search-section .weather-info .cards-section .preasure p, .container .search-section .weather-info .cards-section .humidity p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold; }
