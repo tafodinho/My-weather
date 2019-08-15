@@ -51,25 +51,29 @@ body {
         color: white; }
         .container .search-section .weather-info .detail h1 {
           font-weight: 700;
-          font-size: 60px; }
+          font-size: 60px;
+          text-transform: capitalize; }
           .container .search-section .weather-info .detail h1 sup {
             vertical-align: super;
             font-size: 45px; }
         .container .search-section .weather-info .detail h2 {
           margin-top: 10px;
           font-weight: 500;
-          font-size: 35px; }
+          font-size: 35px;
+          text-transform: capitalize; }
         .container .search-section .weather-info .detail h3 {
-          margin-left: 4px;
-          margin-top: 2px;
+          margin-left: 2px;
+          margin-top: 5px;
           margin-bottom: 5px;
-          font-size: 25px; }
+          font-size: 25px;
+          text-transform: capitalize; }
       .container .search-section .weather-info .cards-section {
         display: grid;
         grid-template-columns: repeat(3, 1.2fr);
         grid-auto-rows: 45%;
         grid-column-gap: 20px;
-        grid-row-gap: 20px; }
+        grid-row-gap: 20px;
+        margin-top: 15px; }
         .container .search-section .weather-info .cards-section .wind, .container .search-section .weather-info .cards-section .preasure, .container .search-section .weather-info .cards-section .humidity {
           padding: 5px 5px 20px 5px;
           background: white;
