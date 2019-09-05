@@ -9,12 +9,17 @@
 <body>
     <div class="container">
         <div class="search-section">
+            <h1>Get Weather Information By City</h1>
             <div class="search-box" id="search-box">
                 <img src="../assets/images/search.svg" alt="" height="20px" width="20px">
-                <input type="" class="search" id="city-text">
+                <input type="" class="search" id="city-text" placeholder="Toggle to get temperature in Fahrenheit" >
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="weather-info" id="weather-info">
-                <div>
+                <!-- <div>
                     <div class="detail">
                         <h1>20.36<sup>o</sup></h1>
                         <h2>Clear</h2>
@@ -37,7 +42,7 @@
                             <p>humidity</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div id="map."></div>

@@ -1,16 +1,10 @@
-const getWeatherData = (city) => {
-    return fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=e121f235d5e789b4763db2bdb5c1530e')
-        .then((response) => {
-            return response.json();
-        })
-        .then((json) => {
-            return json
-        })
-}
+const getWeatherData = (city) => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}$units=metric&appid=e121f235d5e789b4763db2bdb5c1530e`)
+  .then((response) => response.json())
+  .then((json) => json);
 
 const renderWeatherDetails = (data) => {
-    const weatherDetailArea = document.getElementById("weather-info")
-    const weatherHtmlDetails = `
+  const weatherDetailArea = document.getElementById('weather-info');
+  const weatherHtmlDetails = `
         <div>
         <div class="detail">
             <h1>${data.main.temp}<sup>o</sup></h1>
@@ -35,7 +29,7 @@ const renderWeatherDetails = (data) => {
             </div>
         </div>
         </div>
-    `
-    weatherDetailArea.innerHTML = weatherHtmlDetails
-}
-export {getWeatherData, renderWeatherDetails};
+    `;
+  weatherDetailArea.innerHTML = weatherHtmlDetails;
+};
+export { getWeatherData, renderWeatherDetails };

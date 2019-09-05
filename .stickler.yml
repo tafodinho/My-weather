@@ -1,0 +1,4 @@
+linters:
+    flake8:
+    eslint:
+        config: './eslint.config'
