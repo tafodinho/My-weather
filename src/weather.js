@@ -1,13 +1,14 @@
-const getWeatherData = (city) => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}$units=metric&appid=e121f235d5e789b4763db2bdb5c1530e`)
+const getWeatherData = (city) => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e121f235d5e789b4763db2bdb5c1530e`)
   .then((response) => response.json())
   .then((json) => json);
 
-const renderWeatherDetails = (data) => {
-  const weatherDetailArea = document.getElementById('weather-info');
+const renderWeatherDetails = (data, container, toggle) => {
+  const fahrenheit = (data.main.temp * (9 / 5)) + 32;
+  const temp = toggle ? `<h1>${fahrenheit}<sup>o</sup>F</h1>` : `<h1>${data.main.temp}<sup>o</sup>C</h1>`;
   const weatherHtmlDetails = `
         <div>
         <div class="detail">
-            <h1>${data.main.temp}<sup>o</sup></h1>
+            ${temp}
             <h2>${data.weather[0].description}</h2>
             <h3>${data.name},  ${data.sys.country}</h3>
         </div>
@@ -30,6 +31,6 @@ const renderWeatherDetails = (data) => {
         </div>
         </div>
     `;
-  weatherDetailArea.innerHTML = weatherHtmlDetails;
+  container.innerHTML = weatherHtmlDetails;
 };
 export { getWeatherData, renderWeatherDetails };

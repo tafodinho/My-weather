@@ -17,15 +17,14 @@ sup {
   clear: both;
   display: table; }
 
-h1 {
-  text-align: center;
-  margin: 22px 10px;
-  font-size: 23px;
-  font-weight: 600; }
-
 .container {
   position: relative;
   background: grey; }
+  .container h1 {
+    text-align: center;
+    margin: 22px 10px;
+    font-size: 23px;
+    font-weight: 600; }
   .container .search-section {
     position: absolute;
     left: 50%;
