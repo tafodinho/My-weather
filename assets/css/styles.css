@@ -18,6 +18,12 @@ sup {
   clear: both;
   display: table; }
 
+.error {
+  text-align: center;
+  font-size: 23px;
+  color: white;
+  font-weight: bold; }
+
 .container {
   position: relative;
   background: grey; }

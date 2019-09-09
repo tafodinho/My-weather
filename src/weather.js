@@ -5,12 +5,26 @@ const degreesToFahrenheit = (temp) => {
   return result;
 };
 
+const clearFields = () => {
+  // document.getElementById('weather-info').style.display = 'block';
+  document.getElementById('unit').innerHTML = '';
+  document.getElementById('preasure').innerHTML = '';
+  document.getElementById('temp').innerHTML = '';
+  document.getElementById('city').innerHTML = '';
+  document.getElementById('description').innerHTML = '';
+  document.getElementById('country').innerHTML = '';
+  document.getElementById('wind').innerHTML = '';
+  document.getElementById('humidity').innerHTML = '';
+  document.getElementById('preasure').innerHTML = '';
+};
+
 const renderWeatherDetails = (data, toggle) => {
   const tempValue = toggle ? degreesToFahrenheit(data.main.temp) : data.main.temp;
   const unit = toggle ? 'F' : 'C';
+  document.getElementById('weather-info').style.display = 'block';
+  document.getElementById('error').innerHTML = '';
   document.getElementById('unit').innerHTML = unit;
   document.getElementById('preasure').prepend(data.main.pressure);
-  document.getElementById('weather-info').style.display = 'block';
   document.getElementById('temp').innerHTML = tempValue;
   document.getElementById('city').innerHTML = data.name;
   document.getElementById('description').innerHTML = data.weather[0].description;
@@ -21,6 +35,9 @@ const renderWeatherDetails = (data, toggle) => {
 };
 
 const renderErrorPage = () => {
-  document.getElementById('weather-info').innerHTML = 'Error loading location details';
+  clearFields();
+  document.getElementById('weather-info').style.display = 'block';
+  document.getElementById('error').innerHTML = 'Error loading location details';
 };
+
 export { renderWeatherDetails, renderErrorPage };

@@ -15,8 +15,8 @@ inputForm.addEventListener('keypress', (e) => {
       .then((data) => {
         renderWeatherDetails(data, toggle);
       })
-      .catch((error) => {
-        renderErrorPage(error);
+      .catch(() => {
+        renderErrorPage();
       });
   }
 });

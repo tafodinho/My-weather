@@ -16,6 +16,7 @@
             </div>
             <div class="weather-info" id="weather-info">
                 <div>
+                    <div class="error" id="error"></div>
                     <div class="detail">
                         <div id="toggle-button">
                             <sup>o</sup><span id="unit"></span>
@@ -33,17 +34,17 @@
                     <div class="cards-section clearfix">
                         <div class="wind">
                             <img src="../assets/images/breeze.svg" alt="" height="100px" width="75px">
-                            <p id="wind">km/h</p>
+                            <p><span id="wind"></span>km/h</p>
                             <p>Wind</p>
                         </div>
                         <div class="humidity">
                             <img src="../assets/images/preasure.svg" alt="" height="100px" width="75px">
-                            <p id="preasure">ATM</p>
+                            <p><span id="preasure"></span>ATM</p>
                             <p>Atm. Preasure</p>
                         </div>
                         <div class="preasure">
                             <img src="../assets/images/humidity.svg" alt="" height="100px" width="75px">
-                            <p id="humidity">RH</p>
+                            <p><span id="humidity"></span>RH</p>
                             <p>humidity</p>
                         </div>
                     </div>
