@@ -1,17 +1,33 @@
-import { getWeatherData, renderWeatherDetails } from './weather' 
+import { renderWeatherDetails, renderErrorPage } from './weather';
+import getWeatherData from './request';
 
-const inputForm = document.getElementById("search-box")
+const inputForm = document.getElementById('search-box');
+const toggleButton = document.getElementById('toggle');
+let city = null;
+let toggle = null;
 
-const renderSpinner = () => {
+inputForm.addEventListener('keypress', (e) => {
+  city = document.getElementById('city-text').value;
+  toggle = toggleButton.checked ? 1 : 0;
 
-}
+  if (e.keyCode === 13) {
+    getWeatherData(city)
+      .then((data) => {
+        renderWeatherDetails(data, toggle);
+      })
+      .catch(() => {
+        renderErrorPage();
+      });
+  }
+});
 
-inputForm.addEventListener("keypress", (e) => {
-    const city = document.getElementById("city-text").value
-    if(e.keyCode === 13) {
-        getWeatherData(city).then((data) => {
-            renderWeatherDetails(data)
-            console.log(data)
-        })
-    }
-})
+toggleButton.addEventListener('click', () => {
+  toggle = toggleButton.checked ? 1 : 0;
+  getWeatherData(city)
+    .then((data) => {
+      renderWeatherDetails(data, toggle);
+    })
+    .catch(() => {
+      renderErrorPage();
+    });
+});

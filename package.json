@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --progress --watch --developement",
+    "watch": "webpack --progress --watch --development",
     "scss": "node-sass --watch assets/scss -o assets/css"
   },
   "repository": {
@@ -20,8 +20,13 @@
   },
   "homepage": "https://github.com/tafodinho/My-weather#readme",
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
   }
 }

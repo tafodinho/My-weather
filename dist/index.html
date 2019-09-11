@@ -9,31 +9,42 @@
 <body>
     <div class="container">
         <div class="search-section">
+            <h1>Get Weather Information By City</h1>
             <div class="search-box" id="search-box">
                 <img src="../assets/images/search.svg" alt="" height="20px" width="20px">
-                <input type="" class="search" id="city-text">
+                <input type="" class="search" id="city-text" placeholder="Toggle to get temperature in Fahrenheit" >
             </div>
             <div class="weather-info" id="weather-info">
                 <div>
+                    <div class="error" id="error"></div>
                     <div class="detail">
-                        <h1>20.36<sup>o</sup></h1>
-                        <h2>Clear</h2>
-                        <h3>Limbe, CM</h3>
+                        <div id="toggle-button">
+                            <sup>o</sup><span id="unit"></span>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div style="display: inline">
+                                <h1 id="temp"></h1>
+                        </div>
+                        <h2 id="description"></h2>
+                        <h3 id="city">, </h3><h3><span id="country"></span></h3>
                     </div>
                     <div class="cards-section clearfix">
                         <div class="wind">
                             <img src="../assets/images/breeze.svg" alt="" height="100px" width="75px">
-                            <p>4.67km/h</p>
+                            <p><span id="wind"></span>km/h</p>
                             <p>Wind</p>
                         </div>
                         <div class="humidity">
                             <img src="../assets/images/preasure.svg" alt="" height="100px" width="75px">
-                            <p>4.67km/h</p>
+                            <p><span id="preasure"></span>ATM</p>
                             <p>Atm. Preasure</p>
                         </div>
                         <div class="preasure">
                             <img src="../assets/images/humidity.svg" alt="" height="100px" width="75px">
-                            <p>4.67km/h</p>
+                            <p><span id="humidity"></span>RH</p>
                             <p>humidity</p>
                         </div>
                     </div>
