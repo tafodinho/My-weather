@@ -1,7 +1,7 @@
 # My-weather
 A weather application where you can type in your city and get weather information about that city
 
-This app is using the openWeather API to get info about the temperature in Celcius, Fahrenheit and Kelvin, humidity and wind speed of the desired city. The user enters a city and a card of the city entered appears in his screen that he can remove anytime.
+This app is using the openWeather API to get info about the temperature in Celcius, Fahrenheit and Kelvin, humidity and wind speed of the desired city. The user enters a city and a card of the city entered appears in on the screen that can be removed at anytime.
 
 Online preview: https://raw.githack.com/tafodinho/My-weather/master/dist/index.html
 
